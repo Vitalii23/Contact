@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="indAnchorPane" maxHeight="560.0" maxWidth="470.0" minHeight="560.0" minWidth="470.0" prefHeight="560.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controller">
+   <children>
+      <Label layoutX="42.0" layoutY="37.0" text="Фамилия" />
+      <TextField fx:id="indLastNameText" layoutX="163.0" layoutY="33.0" prefHeight="25.0" prefWidth="275.0" />
+      <Label layoutX="56.0" layoutY="74.0" text="Имя" />
+      <TextField fx:id="indFirstNameText" layoutX="164.0" layoutY="70.0" prefHeight="25.0" prefWidth="275.0" />
+      <Label layoutX="43.0" layoutY="114.0" text="Отчество" />
+      <TextField fx:id="indMiddleNameText" layoutX="163.0" layoutY="110.0" prefHeight="25.0" prefWidth="275.0" />
+      <Button fx:id="indAcceptButton" layoutX="76.0" layoutY="504.0" mnemonicParsing="false" onAction="#indAcceptButtonAction" text="ОК" />
+      <Button fx:id="indCancelButton" layoutX="323.0" layoutY="504.0" mnemonicParsing="false" onAction="#indCancelButtonAction" text="Отмена" />
+      <TextField fx:id="indTownText" layoutX="163.0" layoutY="157.0" prefHeight="25.0" prefWidth="275.0" />
+      <Label layoutX="51.0" layoutY="161.0" text="Город" />
+      <DatePicker fx:id="indDateBirthday" layoutX="163.0" layoutY="197.0" />
+      <Label layoutX="26.0" layoutY="201.0" text="Дата рождения" />
+      <TextArea fx:id="indContact" layoutX="163.0" layoutY="278.0" prefHeight="105.0" prefWidth="275.0" />
+      <Label layoutX="18.0" layoutY="314.0" prefHeight="17.0" prefWidth="117.0" text="Контактные данные" />
+      <Label layoutX="18.0" layoutY="331.0" text="(телефон, адрес, email)" />
+      <TextArea fx:id="indDescription" layoutX="163.0" layoutY="400.0" prefHeight="62.0" prefWidth="275.0" />
+      <Label layoutX="41.0" layoutY="423.0" text="Описание" />
+      <TextField fx:id="indPostIndex" layoutX="164.0" layoutY="237.0" />
+      <Label layoutX="18.0" layoutY="241.0" text="Почтовый индекс" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="520.0" maxWidth="880.0" minHeight="520.0" minWidth="880.0" prefHeight="520.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.Controller">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="600.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Фаил">
+               <items>
+                  <MenuItem fx:id="exitMenuItem" mnemonicParsing="false" onAction="#exitAction" text="Выход" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Помощь">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="О программе" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Label layoutX="610.0" layoutY="29.0" text="Город: " />
+      <Label layoutX="609.0" layoutY="59.0" text="Контакт" />
+      <Label layoutX="610.0" layoutY="140.0" text="Описание" />
+      <Label layoutX="608.0" layoutY="337.0" text="Дата рождения:" />
+      <Label layoutX="605.0" layoutY="380.0" text="Почтовый индекс: " />
+      <Label fx:id="townLabel" layoutX="654.0" layoutY="29.0" text="Нет данных" />
+      <TextArea fx:id="descriptionTextArea" layoutX="605.0" layoutY="161.0" prefHeight="137.0" prefWidth="258.0" />
+      <TextArea fx:id="contactTextArea" layoutX="606.0" layoutY="76.0" prefHeight="64.0" prefWidth="258.0" />
+      <Label fx:id="dataBirthdayLabel" layoutX="718.0" layoutY="337.0" text="Нет данных" />
+      <Label fx:id="postIndexLabel" layoutX="718.0" layoutY="380.0" text="Нет данных" />
+      <ScrollPane fx:id="scrollPane" layoutX="-3.0" layoutY="23.0" prefHeight="411.0" prefWidth="600.0">
+         <content>
+            <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Информация">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="600.0">
+                           <children>
+                              <TableView fx:id="tableView" prefHeight="400.0" prefWidth="600.0">
+                                 <columns>
+                                    <TableColumn fx:id="idTableColumn" prefWidth="73.0" text="id" />
+                                    <TableColumn fx:id="familyTableColumn" prefWidth="100.0" text="Фамилия" />
+                                    <TableColumn fx:id="nameTableColumn" prefWidth="119.0" text="Имя" />
+                                    <TableColumn fx:id="middleTableColumn" prefWidth="114.0" text="Отчество" />
+                                    <TableColumn fx:id="postTableColumn" prefWidth="75.0" text="Должность" />
+                                    <TableColumn fx:id="organizationTableColumn" prefWidth="126.0" text="Организация" />
+                                    <TableColumn fx:id="townTableColumn" prefWidth="217.0" text="Город" />
+                                    <TableColumn fx:id="contactTableColumn" prefWidth="75.0" text="Контакт" />
+                                    <TableColumn fx:id="descriptionTableColumn" prefWidth="75.0" text="Описание" />
+                                    <TableColumn fx:id="dateTableColumn" prefWidth="75.0" text="Дата рождения" />
+                                    <TableColumn fx:id="postIndexTableColumn" prefWidth="75.0" text="Почтовый индекс" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </content>
+      </ScrollPane>
+      <ButtonBar layoutX="52.0" layoutY="434.0" prefHeight="79.0" prefWidth="776.0">
+         <buttons>
+            <Button fx:id="addIndButton" mnemonicParsing="false" onAction="#addIndAction" text="Добавить Физическое лицо" />
+            <Button fx:id="addEntButton" mnemonicParsing="false" onAction="#addEntAction" text="Добавить Юридическое лицо" />
+            <Button fx:id="editButton" mnemonicParsing="false" onAction="#editAction" text="Изменить" />
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#deleteAction" text="Удалить" />
+            <Button fx:id="resetButton" mnemonicParsing="false" onAction="#resetButtonAction" prefHeight="25.0" text="Обновить" />
+         </buttons>
+      </ButtonBar>
+      <ToggleButton fx:id="fullAllToggleButton" layoutX="735.0" layoutY="409.0" mnemonicParsing="false" onAction="#fullAllAction" text="Показать данные" />
+      <TextField fx:id="idDeleteText" layoutX="638.0" layoutY="409.0" prefHeight="25.0" prefWidth="55.0" />
+      <Label layoutX="610.0" layoutY="413.0" text="id" />
+   </children>
+</AnchorPane>
